@@ -16,7 +16,7 @@ let frutas = [
 
 app.get('/frutas', (req, res) => {
   res.json({
-    sucess: true,
+    success: true,
     data: frutas,
   })
 })
