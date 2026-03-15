@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+app.use(express.json())
 const port = 3000
 
 let alunos = [
@@ -25,12 +26,12 @@ app.get('/', (req, res) => {
   res.send('Pai do Edubardo!')
 })
 
-// app.get('/alunos/getAll', (req, res) => {
-//   res.send().json({
-//     success: true,
-//     data: alunos,
-//   })
-// })
+app.get('/alunos', (req, res) => {
+  res.json({
+    success: true,
+    data: alunos,
+  })
+})
 
 //GET - buscar aluno by id
 
@@ -63,11 +64,11 @@ app.post('/alunos', (req, res) => {
         })
     }
     const novoAluno = {
-        id: alunos.legth + 1,
-        nome,
+        id: alunos.length + 1,
+        nome,''
         idade
     }
-    aluno.push(novoAluno)
+    alunos.push(novoAluno)
     res.status(201).json({
         sucess: true,
         data: novoAluno,
