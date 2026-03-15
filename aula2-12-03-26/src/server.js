@@ -65,7 +65,7 @@ app.post('/alunos', (req, res) => {
     }
     const novoAluno = {
         id: alunos.length + 1,
-        nome,''
+        nome,
         idade
     }
     alunos.push(novoAluno)
