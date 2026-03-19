@@ -13,5 +13,5 @@ app.get('/', (req, res) => {
 app.use('/fruits', fruitsRoute)
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`O server está sendo rodado na porta: ${port}`)
 })

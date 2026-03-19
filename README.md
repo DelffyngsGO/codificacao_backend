@@ -31,3 +31,11 @@ Busca por id e POST de frutas
 8° commit - 18/03/26
 
 Adição do README
+
+9° commit - 18/03/26
+
+Realização da aula 4
+
+10° commit - 19/03/26
+
+Últimos ajustes na aula 4 e commit para a atividade(Luan)
