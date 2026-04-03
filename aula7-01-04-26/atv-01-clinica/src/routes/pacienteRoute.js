@@ -34,8 +34,10 @@ route.get('/:id', (req, res) => {
 route.patch('/:id', (req, res) => {
     const { id } = req.params;
     const { nome } = req.body;
+    const { idade } = req.body;
+    const { sintoma } = req.body;
 
-    const pacienteUpd = pacienteService.updatePatch(id, nome);
+    const pacienteUpd = pacienteService.updatePatch(id, nome, idade, sintoma);
 
     if (!pacienteUpd) {
         return res.status(404).json({ message: 'Paciente não encontrado para atualização' });
@@ -47,12 +49,22 @@ route.patch('/:id', (req, res) => {
 route.put('/:id', (req, res) => {
     const { id } = req.params;
     const { nome } = req.body;
+    const { idade } = req.body;
+    const { sintoma } = req.body;
 
     if (!nome) {
         return res.status(400).json({ message: 'Dados insuficientes para substituição (nome, idade e sintoma são obrigatórios)' });
     }
 
-    const pacienteUpd = pacienteService.updatePut(id, { nome });
+    if (!idade) {
+        return res.status(400).json({ message: 'Dados insuficientes para substituição (nome, idade e sintoma são obrigatórios)' });
+    }
+
+    if (!sintoma) {
+        return res.status(400).json({ message: 'Dados insuficientes para substituição (nome, idade e sintoma são obrigatórios)' });
+    }
+
+    const pacienteUpd = pacienteService.updatePut(id, { nome, idade, sintoma });
 
     if (!pacienteUpd) {
         return res.status(404).json({ message: 'Paciente não encontrado para substituição' });

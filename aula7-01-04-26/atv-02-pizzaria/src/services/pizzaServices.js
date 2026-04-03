@@ -12,9 +12,9 @@ class PizzaService {
     create(data) {
         const newPizza = {
             id: pizzas.length > 0 ? pizzas[pizzas.length - 1].id + 1 : 1,
-            // nome: data.nome,
-            // idade: data.idade,
-            // sintoma: data.sintoma
+            nome: data.nome,
+            tamanho: data.tamanho,
+            preço: data.preço
         }
 
         pizzas.push(newPizza)
@@ -22,13 +22,21 @@ class PizzaService {
         return newPizza
     }
 
-    updatePatch(id, nome) {
+    updatePatch(id, nome, tamanho, preço) {
         const index = pizzas.findIndex((p) => p.id === parseInt(id));
 
         if (index === -1) return null;
 
         if (nome) {
             pizzas[index].nome = nome;
+        }
+
+        if (tamanho) {
+            pizzas[index].tamanho = tamanho;
+        }
+
+        if (preço) {
+            pizzas[index].preço = preço;
         }
 
         return pizzas[index];

@@ -43,3 +43,19 @@ Realização da aula 4
 11° commit - 19/03/26
 
 Preenchendo os arquivos Services e Routes para a atividade(Luan)
+
+12° commit - 25/03/26
+
+Criando API de Filmes com getAll e getById para a atividade(Édio)
+
+13° commit - 01/04/26
+
+Início da atividade(Édio) das 3 APIs. Commit parcial
+
+14° commit - 01/04/26
+
+Início da atividade(Édio) das 3 APIs. Commit completo
+
+15° commit - 03/04/26
+
+Finalização da atividade(Édio) das 3 APIs. E implementação dos commits anteriores no README.

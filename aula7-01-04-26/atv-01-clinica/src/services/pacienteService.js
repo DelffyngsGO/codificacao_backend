@@ -22,7 +22,7 @@ class PacienteService {
         return newPaciente
     }
 
-    updatePatch(id, nome) {
+    updatePatch(id, nome, idade, sintoma) {
         const index = pacientes.findIndex((p) => p.id === parseInt(id));
 
 
@@ -30,6 +30,14 @@ class PacienteService {
 
         if (nome) {
             pacientes[index].nome = nome;
+        }
+
+        if (idade) {
+            pacientes[index].idade = idade;
+        }
+
+        if (sintoma) {
+            pacientes[index].sintoma = sintoma;
         }
 
         return pacientes[index];

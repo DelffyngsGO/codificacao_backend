@@ -15,9 +15,9 @@ route.post('/', (req, res) => {
         return res.status(404).json({ message: 'É necessário informar o nome do pizza, tamanho e preço para adicionar a pizza' })
     }
 
-    const newPaciente = pizzaService.create(data)
+    const newPizza = pizzaService.create(data)
 
-    res.json(newPaciente)
+    res.json(newPizza)
 })
 
 route.get('/:id', (req, res) => {
@@ -34,8 +34,10 @@ route.get('/:id', (req, res) => {
 route.patch('/:id', (req, res) => {
     const { id } = req.params;
     const { nome } = req.body;
+    const { tamanho } = req.body;
+    const { preço } = req.body;
 
-    const pizzaUpd = pizzaService.updatePatch(id, nome);
+    const pizzaUpd = pizzaService.updatePatch(id, nome, tamanho, preço);
 
     if (!pizzaUpd) {
         return res.status(404).json({ message: 'Pizza não encontrada para atualização' });
@@ -47,12 +49,22 @@ route.patch('/:id', (req, res) => {
 route.put('/:id', (req, res) => {
     const { id } = req.params;
     const { nome } = req.body;
+    const { tamanho } = req.body;
+    const { preço } = req.body;
 
     if (!nome) {
         return res.status(400).json({ message: 'Dados insuficientes para substituição (nome, tamanho e preço são obrigatórios)' });
     }
 
-    const pizzaUpd = pizzaService.updatePut(id, { nome });
+    if (!tamanho) {
+        return res.status(400).json({ message: 'Dados insuficientes para substituição (nome, tamanho e preço são obrigatórios)' });
+    }
+
+    if (!preço) {
+        return res.status(400).json({ message: 'Dados insuficientes para substituição (nome, tamanho e preço são obrigatórios)' });
+    }
+
+    const pizzaUpd = pizzaService.updatePut(id, { nome, tamanho, preço });
 
     if (!pizzaUpd) {
         return res.status(404).json({ message: 'Pizza não encontrada para substituição' });
