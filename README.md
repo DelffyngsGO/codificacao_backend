@@ -59,3 +59,7 @@ Início da atividade(Édio) das 3 APIs. Commit completo
 15° commit - 03/04/26
 
 Finalização da atividade(Édio) das 3 APIs. E implementação dos commits anteriores no README.
+
+16° commit - 06-04-26
+
+Atividade(Édio) sobre PUT e PATCH
