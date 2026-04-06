@@ -63,3 +63,7 @@ Finalização da atividade(Édio) das 3 APIs. E implementação dos commits ante
 16° commit - 06-04-26
 
 Atividade(Édio) sobre PUT e PATCH
+
+17° commit - 06-04-26
+
+Atividade(Édio) sobre Modulo Fs usando PUT, PATCH, POST e DELETE
