@@ -67,3 +67,7 @@ Atividade(Édio) sobre PUT e PATCH
 17° commit - 06-04-26
 
 Atividade(Édio) sobre Modulo Fs usando PUT, PATCH, POST e DELETE
+
+18° commit - 08/04/26
+
+Atividade(Édio) sobre API de frutas usando express com a forma do fs

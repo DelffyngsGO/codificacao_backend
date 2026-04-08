@@ -1,0 +1,11 @@
+{
+  "name": "API_Express",
+  "version": "1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch ./src/app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
